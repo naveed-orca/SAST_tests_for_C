@@ -32,7 +32,6 @@ jobs:
           path:
             # scanning the entire repository
             "."
-
       - name: Upload JSON file as artifact
         uses: actions/upload-artifact@v4
         if: ${{ always() && steps.orca-sast-scan.outputs.exit_code == 3 }}
